@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma & Grano | Cafetería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="logo">☕ Aroma & Grano</div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#menu">Menú</a>
+            <a href="#reservas">Reservas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- INICIO -->
+        <section class="hero" id="inicio">
+            <div class="hero-contenido">
+                <p class="subtitulo">EL SABOR DE UN BUEN MOMENTO</p>
+                <h1>Bienvenido a Aroma & Grano</h1>
+                <p>Disfruta el aroma del café y los mejores sabores en un ambiente especial.</p>
+
+                <a href="#reservas" class="boton">Reserva tu mesa</a>
+
+                <div class="estado">
+                    <span id="estadoLocal">Consultando horario...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOSOTROS -->
+        <section class="seccion nosotros" id="nosotros">
+            <h2>Nuestra historia</h2>
+            <p>
+                En Aroma & Grano creemos que cada taza de café cuenta una historia.
+                Somos una cafetería dedicada a ofrecer bebidas deliciosas,
+                productos frescos y un espacio agradable para compartir
+                con familiares y amigos.
+            </p>
+        </section>
+
+        <!-- MENÚ -->
+        <section class="seccion menu" id="menu">
+            <h2>Nuestra carta</h2>
+            <p class="descripcion-seccion">
+                Descubre nuestros productos y elige tu favorito.
+            </p>
+
+            <div class="pestanas">
+                <button class="tab activa" data-categoria="Cafés">Cafés</button>
+                <button class="tab" data-categoria="Bebidas frías">Bebidas frías</button>
+                <button class="tab" data-categoria="Panadería">Panadería</button>
+                <button class="tab" data-categoria="Desayunos">Desayunos</button>
+            </div>
+
+            <div class="productos" id="productos">
+                <!-- Los productos aparecen desde JavaScript -->
+            </div>
+        </section>
+
+        <!-- RESERVAS -->
+        <section class="seccion reservas" id="reservas">
+            <h2>Reserva tu mesa</h2>
+            <p class="descripcion-seccion">
+                Completa el formulario para solicitar tu reserva.
+            </p>
+
+            <form id="formReserva">
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" required placeholder="Escribe tu nombre">
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" required placeholder="ejemplo@gmail.com">
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" required placeholder="Tu número de teléfono">
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha de reserva</label>
+                    <input type="date" id="fecha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="hora">Hora de reserva</label>
+                    <input type="time" id="hora" required>
+                </div>
+
+                <div class="campo">
+                    <label for="personas">Número de personas</label>
+                    <input type="number" id="personas" min="1" max="10" required placeholder="Entre 1 y 10">
+                </div>
+
+                <button type="submit" class="boton boton-formulario">
+                    Confirmar reserva
+                </button>
+            </form>
+
+            <div id="resumenReserva" class="resumen" hidden>
+                <h3>¡Solicitud de reserva registrada!</h3>
+                <div id="datosReserva"></div>
+
+                <button type="button" id="enviarWhatsApp" class="boton boton-whatsapp">
+                    Enviar reserva por WhatsApp
+                </button>
+            </div>
+        </section>
+
+        <!-- CONTACTO Y UBICACIÓN -->
+        <section class="seccion contacto" id="contacto">
+            <h2>Visítanos</h2>
+            <p class="descripcion-seccion">
+                Estamos felices de recibirte en Aroma & Grano.
+            </p>
+
+            <div class="contacto-info">
+                <div class="dato-contacto">
+                    <span>📍</span>
+                    <h3>Ubicación</h3>
+                    <p>Canalete, Córdoba, Colombia</p>
+                </div>
+
+                <div class="dato-contacto">
+                    <span>📞</span>
+                    <h3>Teléfono</h3>
+                    <p>3104428485</p>
+                    <a href="tel:3104428485">Llamar ahora</a>
+                </div>
+
+                <div class="dato-contacto">
+                    <span>✉️</span>
+                    <h3>Correo electrónico</h3>
+                    <p>anayacristian211@gmail.com</p>
+                    <a href="mailto:anayacristian211@gmail.com">Enviar correo</a>
+                </div>
+            </div>
+
+            <div class="mapa">
+                <h3>Encuéntranos en el mapa</h3>
+
+                <iframe
+                    src="https://www.google.com/maps?q=Canalete,Cordoba,Colombia&output=embed"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+
+                <a class="boton" target="_blank"
+                   href="https://www.google.com/maps/search/?api=1&query=Canalete%2C+C%C3%B3rdoba%2C+Colombia">
+                    Cómo llegar
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Aroma & Grano - Todos los derechos reservados.</p>
+        <p>Hecho con amor por los amantes del café ☕</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
